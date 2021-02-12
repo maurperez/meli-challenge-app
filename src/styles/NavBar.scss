@@ -1,0 +1,65 @@
+@use 'sass:color';
+@import './variables.scss';
+
+$seachbar-heigth: 36px;
+
+.nav-container{
+  display: flex;
+  flex-direction: row;
+  padding: 0 10%;
+  background-color: $brand-color;
+  height: 55px;
+  align-items: center;
+
+  >img{
+    padding: 0 15px;
+  }
+
+  > .searchbar{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 0 15px;
+    height: $seachbar-heigth;
+
+
+    > input {
+      color: color.adjust(#000000, $whiteness: 40%);
+      font-size: 15px;
+      padding: 1px 12px;
+      border: 0;
+      border-radius: 3px 0 0 3px;
+      width: 100%;
+
+      &::placeholder{
+        color: #999999;
+        text-decoration: none;
+      }
+
+      &:focus{
+        outline: none;
+      }
+    }
+
+    > button {
+      background-color: #eeeeee;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: $seachbar-heigth;
+      border-radius: 0 3px 3px 0;
+      border: 0;
+
+    }
+  }
+
+  @media screen and (max-width: $mobile-bp) {
+    padding: 0;
+
+    > img, .searchbar {
+      padding: 0 8px;
+    }
+  }
+  
+}
+
