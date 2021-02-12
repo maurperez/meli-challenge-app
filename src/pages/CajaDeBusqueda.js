@@ -1,3 +1,3 @@
-import { NavBar } from "../components/Navbar"
+import { NavBar } from '../components/Navbar'
 
-export const CajaDeBusqueda = () => <NavBar/>
+export const CajaDeBusqueda = () => <NavBar />
