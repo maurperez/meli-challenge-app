@@ -1,0 +1,81 @@
+@use "sass:map";
+@import './variables.scss';
+$preview-img-size: ("desktop": 130px, "mobile": 115px);
+
+
+.product-preview{
+  width: 100%;
+  padding: 10px 0;
+  justify-content: space-between;
+  background-color: transparent;
+
+  > .location {
+    font-size: x-small;
+    margin: 15px 15px 0 0;
+    color: #4d4d4d;
+    white-space: nowrap;
+  }
+}
+
+
+.product-info {
+  width: 70%;
+  align-items: flex-start;
+  height: 100%;
+
+  > .thumbtail {
+    height: map.get($preview-img-size, "desktop");
+    width: map.get($preview-img-size, "desktop");
+    display: flex;
+    align-content: center;
+    text-align: center;
+    margin: 0 10px;
+  
+    > img {
+      height: 100%;
+      width: map.get($preview-img-size, "desktop");
+      object-fit: cover;
+      border-radius: 4px;
+    }
+  }
+}
+
+.price-and-title {
+  margin-top: 5px;
+
+  > .title {
+    font-weight: 480;
+    font-size: 14px;
+  }
+
+  > .price-container {
+    align-items: center;
+    
+    > .price {
+      margin-right: 5px;
+      font-size: 20px;
+    }
+  
+    > .icon-ship {
+      height: 65%;
+      width: auto;
+    }
+  
+  }
+
+}
+
+@media screen and (max-width: $mobile-bp ) {
+  .product-info {
+    width: 100%;
+  }
+
+  .product-info > .thumbtail {
+    height: map.get($preview-img-size, "mobile");
+    width: map.get($preview-img-size, "mobile");
+
+    > img {
+      width: map.get($preview-img-size, "mobile");
+    }
+  }
+}
