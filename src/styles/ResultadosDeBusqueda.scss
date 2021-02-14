@@ -1,0 +1,23 @@
+@import './variables.scss';
+@import './mixins.scss';
+
+.products-container {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+
+  > .categories {
+    color: #999999;
+    font-size: 14px;
+    margin: 16px 0;
+  }
+
+  @include breakpoint(mobile) {
+    width: 100%;
+
+    > .categories {
+      margin: 16px 0 16px 10px;
+    }
+  }
+}
