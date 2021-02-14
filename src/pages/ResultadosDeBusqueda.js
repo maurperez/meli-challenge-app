@@ -43,8 +43,13 @@ export const ResultadosDeBusqueda = () => {
     <NavBar></NavBar>
     {searchState.loading && <Loading/>}
     {searchState.error && <div>{searchState.error}</div>}
-    {searchState.response && <div className='products-container'>
-      {searchState.response.items.slice(0, 4).map((product) => <ProductPreview product={product} key={product.id}/>)}
-    </div>}
+    {searchState.response && 
+      <Fragment>
+        <div className='products-container'>
+          <span className='categories'>{searchState.response.categories?.join(' > ')}</span>
+          {searchState.response.items.slice(0, 4).map((product) => <ProductPreview product={product} key={product.id}/>)}
+        </div>
+      </Fragment>
+    }
   </Fragment>
 }

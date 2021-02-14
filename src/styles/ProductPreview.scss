@@ -1,60 +1,55 @@
 @use "sass:map";
 @import './variables.scss';
 @import './mixins.scss';
-$preview-img-size: ("desktop": 130px, "mobile": 115px);
+$preview-img-size: ("desktop": 180px, "mobile": 130px);
 
 
 .product-preview{
   width: 100%;
-  padding: 10px 0;
+  padding: 16px 0;
   justify-content: space-between;
-  background-color: transparent;
+  background-color: white;
 
   > .location {
-    font-size: x-small;
-    margin: 15px 15px 0 0;
-    color: #4d4d4d;
+    font-size: 12px;
+    margin: 20px 30px;
+    color: #999999;
     white-space: nowrap;
+    text-align: right;
   }
 }
 
 
 .product-info {
-  width: 70%;
   align-items: flex-start;
-  height: 100%;
+  max-width: 80%;
 
-  > .thumbtail {
+  > img {
     height: map.get($preview-img-size, "desktop");
     width: map.get($preview-img-size, "desktop");
-    display: flex;
-    align-content: center;
-    text-align: center;
-    margin: 0 10px;
-  
-    > img {
-      height: 100%;
-      width: map.get($preview-img-size, "desktop");
-      object-fit: cover;
-      border-radius: 4px;
-    }
+    object-fit: cover;
+    border-radius: 4px;
+    margin: 0 16px;
   }
 }
 
 .price-and-title {
-  margin-top: 5px;
 
   > .title {
-    font-weight: 480;
-    font-size: 14px;
+    font-weight: normal;
+    font-size: 18px;
+    margin: 0;
   }
 
   > .price-container {
     align-items: center;
+    margin-bottom: 32px;
     
     > .price {
       margin-right: 5px;
-      font-size: 20px;
+      font-size: 24px;
+      text-decoration: none;
+      color: black;
     }
   
     > .icon-ship {
@@ -67,16 +62,27 @@ $preview-img-size: ("desktop": 130px, "mobile": 115px);
 }
 
 @include breakpoint(mobile){
-  .product-info {
-    width: 100%;
+
+  .product-preview > .location {
+    margin: 10px 5px 0 0;
+    white-space: normal;
   }
 
-  .product-info > .thumbtail {
+  .price-and-title {
+    > .title {
+      font-size: 14px;
+    }
+
+    > .price-container {
+      margin-bottom: 20px;
+      > .price {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .product-info > img {
     height: map.get($preview-img-size, "mobile");
     width: map.get($preview-img-size, "mobile");
-
-    > img {
-      width: map.get($preview-img-size, "mobile");
-    }
   }
 }

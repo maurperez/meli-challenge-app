@@ -3,12 +3,21 @@
 
 .products-container{
   width: 80%;
-  margin: 25px auto auto auto;
+  margin: auto;
   display: flex;
   flex-direction: column;
-  background-color: white;
+
+  > .categories {
+    color: #999999;
+    font-size: 14px;
+    margin: 16px 0;
+  }
 
   @include breakpoint(mobile){
     width: 100%;
+
+    > .categories{
+      margin: 16px 0 16px 10px;
+    }
   }
 }
