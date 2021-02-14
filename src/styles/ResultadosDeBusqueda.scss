@@ -1,4 +1,5 @@
 @import './variables.scss';
+@import './mixins.scss'
 
 .products-container{
   width: 80%;
@@ -7,7 +8,7 @@
   flex-direction: column;
   background-color: white;
 
-  @media screen and (max-width: $mobile-bp) {
+  @include breakpoint(mobile){
     width: 100%;
   }
 }

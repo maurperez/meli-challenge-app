@@ -1,5 +1,6 @@
 @use "sass:map";
 @import './variables.scss';
+@import './mixins.scss';
 $preview-img-size: ("desktop": 130px, "mobile": 115px);
 
 
@@ -65,7 +66,7 @@ $preview-img-size: ("desktop": 130px, "mobile": 115px);
 
 }
 
-@media screen and (max-width: $mobile-bp ) {
+@include breakpoint(mobile){
   .product-info {
     width: 100%;
   }
