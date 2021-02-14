@@ -1,5 +1,5 @@
 import '../styles/ResultadosDeBusqueda.scss'
-import { ProductPreview } from "../components/ProductPreview"
+import { ProductPreview } from '../components/ProductPreview'
 import { Fragment, useEffect, useState } from 'react'
 import { NavBar } from '../components/Navbar'
 import { Loading } from '../components/Loading'
@@ -23,33 +23,41 @@ export const ResultadosDeBusqueda = () => {
     })
     fetch(`http://localhost:8080/api/items?q=${query}`)
       .then(res => res.json())
-      .then(res => setSearchState({
-        response: res,
-        loading: false,
-        error: null
-      })) 
-      .catch(err => setSearchState({
-        response: null,
-        loading: false,
-        error: err.message
-      }))
+      .then(res =>
+        setSearchState({
+          response: res,
+          loading: false,
+          error: null
+        })
+      )
+      .catch(err =>
+        setSearchState({
+          response: null,
+          loading: false,
+          error: err.message
+        })
+      )
   }
 
   useEffect(fetchData, [location])
 
-
-
-  return <Fragment>
-    <NavBar></NavBar>
-    {searchState.loading && <Loading/>}
-    {searchState.error && <div>{searchState.error}</div>}
-    {searchState.response && 
-      <Fragment>
-        <div className='products-container'>
-          <span className='categories'>{searchState.response.categories?.join(' > ')}</span>
-          {searchState.response.items.slice(0, 4).map((product) => <ProductPreview product={product} key={product.id}/>)}
-        </div>
-      </Fragment>
-    }
-  </Fragment>
+  return (
+    <Fragment>
+      <NavBar></NavBar>
+      {searchState.loading && <Loading />}
+      {searchState.error && <div>{searchState.error}</div>}
+      {searchState.response && (
+        <Fragment>
+          <div className='products-container'>
+            <span className='categories'>
+              {searchState.response.categories?.join(' > ')}
+            </span>
+            {searchState.response.items.slice(0, 4).map(product => (
+              <ProductPreview product={product} key={product.id} />
+            ))}
+          </div>
+        </Fragment>
+      )}
+    </Fragment>
+  )
 }

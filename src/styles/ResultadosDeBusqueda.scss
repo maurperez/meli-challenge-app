@@ -1,7 +1,7 @@
 @import './variables.scss';
 @import './mixins.scss';
 
-.products-container{
+.products-container {
   width: 80%;
   margin: auto;
   display: flex;
@@ -13,10 +13,10 @@
     margin: 16px 0;
   }
 
-  @include breakpoint(mobile){
+  @include breakpoint(mobile) {
     width: 100%;
 
-    > .categories{
+    > .categories {
       margin: 16px 0 16px 10px;
     }
   }

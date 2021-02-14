@@ -1,10 +1,12 @@
 @use "sass:map";
 @import './variables.scss';
 @import './mixins.scss';
-$preview-img-size: ("desktop": 180px, "mobile": 130px);
+$preview-img-size: (
+  'desktop': 180px,
+  'mobile': 130px
+);
 
-
-.product-preview{
+.product-preview {
   width: 100%;
   padding: 16px 0;
   justify-content: space-between;
@@ -19,14 +21,13 @@ $preview-img-size: ("desktop": 180px, "mobile": 130px);
   }
 }
 
-
 .product-info {
   align-items: flex-start;
   max-width: 80%;
 
   > img {
-    height: map.get($preview-img-size, "desktop");
-    width: map.get($preview-img-size, "desktop");
+    height: map.get($preview-img-size, 'desktop');
+    width: map.get($preview-img-size, 'desktop');
     object-fit: cover;
     border-radius: 4px;
     margin: 0 16px;
@@ -34,7 +35,6 @@ $preview-img-size: ("desktop": 180px, "mobile": 130px);
 }
 
 .price-and-title {
-
   > .title {
     font-weight: normal;
     font-size: 18px;
@@ -44,25 +44,22 @@ $preview-img-size: ("desktop": 180px, "mobile": 130px);
   > .price-container {
     align-items: center;
     margin-bottom: 32px;
-    
+
     > .price {
       margin-right: 5px;
       font-size: 24px;
       text-decoration: none;
       color: black;
     }
-  
+
     > .icon-ship {
       height: 65%;
       width: auto;
     }
-  
   }
-
 }
 
-@include breakpoint(mobile){
-
+@include breakpoint(mobile) {
   .product-preview > .location {
     margin: 10px 5px 0 0;
     white-space: normal;
@@ -82,7 +79,7 @@ $preview-img-size: ("desktop": 180px, "mobile": 130px);
   }
 
   .product-info > img {
-    height: map.get($preview-img-size, "mobile");
-    width: map.get($preview-img-size, "mobile");
+    height: map.get($preview-img-size, 'mobile');
+    width: map.get($preview-img-size, 'mobile');
   }
 }

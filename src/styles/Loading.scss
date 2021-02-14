@@ -1,12 +1,12 @@
-@import "spinners";
+@import 'spinners';
 
-.spinner-container{
+.spinner-container {
   margin-top: 20px;
   display: flex;
   width: 100%;
   justify-content: center;
 }
 
-.loading-spinner{
-  @include spinner(35px, 3px solid black)
+.loading-spinner {
+  @include spinner(35px, 3px solid black);
 }

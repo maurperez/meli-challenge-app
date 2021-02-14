@@ -1,6 +1,6 @@
 $mobile-bp: 480px;
 
-@mixin breakpoint ($point) {
+@mixin breakpoint($point) {
   @if $point == mobile {
     @media screen and (max-width: $mobile-bp) {
       @content;
