@@ -1,0 +1,13 @@
+@import './variables.scss';
+
+.products-container{
+  width: 80%;
+  margin: 25px auto auto auto;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+
+  @media screen and (max-width: $mobile-bp) {
+    width: 100%;
+  }
+}
