@@ -1,67 +1,70 @@
 @use 'sass:color';
 @import './variables.scss';
+@import './mixins.scss';
 
-$seachbar-heigth: 36px;
+$seachbar-heigth: 40px;
 
 .nav-container {
-  display: flex;
-  flex-direction: row;
   padding: 0 10%;
   background-color: $brand-color;
   height: 55px;
+  justify-content: space-between;
   align-items: center;
 
   > img {
-    padding: 0 15px;
+    height: 70%;
+    width: auto;
   }
+}
 
-  > .searchbar {
-    display: flex;
-    flex-direction: row;
+.searchbar {
+  width: 100%;
+  margin-left: 15px;
+  height: $seachbar-heigth;
+
+  > input {
+    color: color.adjust(#000000, $whiteness: 40%);
+    font-size: 18px;
+    padding: 1px 12px;
+    border: 0;
+    border-radius: 3px 0 0 3px;
     width: 100%;
-    padding: 0 15px;
-    height: $seachbar-heigth;
 
-    > input {
-      color: color.adjust(#000000, $whiteness: 40%);
-      font-size: 15px;
-      padding: 1px 12px;
-      border: 0;
-      border-radius: 3px 0 0 3px;
-      width: 100%;
-
-      &::placeholder {
-        color: #999999;
-        text-decoration: none;
-      }
-
-      &:focus {
-        outline: none;
-      }
+    &::placeholder {
+      color: #999999;
+      text-decoration: none;
     }
 
-    > button {
-      background-color: #eeeeee;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-width: $seachbar-heigth;
-      border-radius: 0 3px 3px 0;
-      border: 0;
-
-      > img {
-        height: 55%;
-        width: auto;
-      }
+    &:focus {
+      outline: none;
     }
   }
 
-  @media screen and (max-width: $mobile-bp) {
-    padding: 0;
+  > button {
+    background-color: #eeeeee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: $seachbar-heigth;
+    border-radius: 0 3px 3px 0;
+    border: 0;
 
-    > img,
-    .searchbar {
-      padding: 0 8px;
+    > img {
+      height: 55%;
+      width: auto;
     }
+  }
+}
+
+@include breakpoint(mobile){
+  .nav-container {
+    padding: 0;
+    > img {
+      padding-left: 8px;
+    }
+  }
+
+  .searchbar{
+    padding-right: 8px;
   }
 }
