@@ -15,10 +15,10 @@ export const NavBar = () => {
   }
 
   return (
-    <div className='nav-container'>
+    <div className='nav-container flex-row'>
       <img src={logoMl} alt='mercado-libre-logo' />
       <form
-        className='searchbar'
+        className='searchbar flex-row'
         onSubmit={handleFormSubmit}
         spellCheck={false}
       >

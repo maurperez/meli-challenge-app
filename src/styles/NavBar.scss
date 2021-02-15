@@ -5,8 +5,6 @@
 $seachbar-heigth: 40px;
 
 .nav-container {
-  display: flex;
-  flex-direction: row;
   padding: 0 10%;
   background-color: $brand-color;
   height: 55px;
@@ -14,16 +12,13 @@ $seachbar-heigth: 40px;
   align-items: center;
 
   > img {
-    height: 60%;
+    height: 70%;
     width: auto;
   }
 }
 
 .searchbar {
-  display: flex;
-  flex-direction: row;
   width: 100%;
-
   margin-left: 15px;
   height: $seachbar-heigth;
 
