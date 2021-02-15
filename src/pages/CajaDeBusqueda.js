@@ -1,3 +1,1 @@
-import { NavBar } from '../components/Navbar'
-
-export const CajaDeBusqueda = () => <NavBar />
+export const CajaDeBusqueda = () => null

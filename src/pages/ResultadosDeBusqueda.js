@@ -42,8 +42,7 @@ export const ResultadosDeBusqueda = () => {
   useEffect(fetchData, [location])
 
   return (
-    <Fragment>
-      <NavBar></NavBar>
+    <>
       {searchState.loading && <Loading />}
       {searchState.error && <div>{searchState.error}</div>}
       {searchState.response && (
@@ -58,6 +57,6 @@ export const ResultadosDeBusqueda = () => {
           </div>
         </Fragment>
       )}
-    </Fragment>
+    </>
   )
 }
