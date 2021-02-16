@@ -56,7 +56,7 @@ $seachbar-heigth: 40px;
   }
 }
 
-@include breakpoint(sm){
+@include breakpoint(sm) {
   .nav-container {
     padding: 0;
     > img {
@@ -64,7 +64,7 @@ $seachbar-heigth: 40px;
     }
   }
 
-  .searchbar{
+  .searchbar {
     padding-right: 8px;
   }
 }
