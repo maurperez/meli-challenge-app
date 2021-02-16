@@ -1,6 +1,6 @@
 @use 'sass:color';
-@import './variables.scss';
-@import './mixins.scss';
+@import './variables/color.scss';
+@import './mixins/breakpoint.scss';
 
 $seachbar-heigth: 40px;
 
@@ -56,7 +56,7 @@ $seachbar-heigth: 40px;
   }
 }
 
-@include breakpoint(mobile){
+@include breakpoint(sm){
   .nav-container {
     padding: 0;
     > img {

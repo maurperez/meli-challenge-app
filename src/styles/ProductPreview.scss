@@ -1,9 +1,10 @@
 @use "sass:map";
-@import './variables.scss';
-@import './mixins.scss';
+@import './variables/color.scss';
+@import './mixins/breakpoint.scss';
+
 $preview-img-size: (
-  'desktop': 180px,
-  'mobile': 130px
+  big: 180px,
+  small: 130px
 );
 
 .product-preview {
@@ -12,7 +13,7 @@ $preview-img-size: (
   justify-content: space-between;
   background-color: white;
 
-  > .location {
+  .location {
     font-size: 12px;
     margin: 20px 30px;
     color: #999999;
@@ -26,8 +27,8 @@ $preview-img-size: (
   max-width: 80%;
 
   > img {
-    height: map.get($preview-img-size, 'desktop');
-    width: map.get($preview-img-size, 'desktop');
+    height: map.get($preview-img-size, big);
+    width: map.get($preview-img-size, big);
     object-fit: cover;
     border-radius: 4px;
     margin: 0 16px;
@@ -35,13 +36,13 @@ $preview-img-size: (
 }
 
 .price-and-title {
-  > .title {
+  .title {
     font-weight: normal;
     font-size: 18px;
     margin: 0;
   }
 
-  > .price-container {
+  .price-container {
     align-items: center;
     margin-bottom: 32px;
 
@@ -59,18 +60,18 @@ $preview-img-size: (
   }
 }
 
-@include breakpoint(mobile) {
-  .product-preview > .location {
+@include breakpoint(sm) {
+  .location {
     margin: 10px 5px 0 0;
     white-space: normal;
   }
 
   .price-and-title {
-    > .title {
+    .title {
       font-size: 14px;
     }
 
-    > .price-container {
+    .price-container {
       margin-bottom: 20px;
       > .price {
         font-size: 20px;
@@ -79,7 +80,7 @@ $preview-img-size: (
   }
 
   .product-info > img {
-    height: map.get($preview-img-size, 'mobile');
-    width: map.get($preview-img-size, 'mobile');
+    height: map.get($preview-img-size, small);
+    width: map.get($preview-img-size, small);
   }
 }

@@ -1,3 +1,5 @@
+@import './variables/color.scss';
+
 .container {
   display: flex;
   flex-direction: column;
@@ -14,7 +16,7 @@
 }
 
 body {
-  background-color: #eeeeee;
+  background-color: $body-bg;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
