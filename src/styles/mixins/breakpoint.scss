@@ -1,4 +1,5 @@
 @use 'sass:map';
+
 $grid-breakpoints: (
   sm: 576px,
   md: 768px,
@@ -7,7 +8,7 @@ $grid-breakpoints: (
   xxl: 1400px
 );
 
-@mixin breakpoint($point, $customPoint: 0) {
+@mixin breakpoint($point) {
   @media screen and (max-width: map.get($grid-breakpoints, $point)) {
     @content;
   }

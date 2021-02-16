@@ -1,7 +1,11 @@
 @use 'sass:map';
 @import './mixins/breakpoint.scss';
 
-$product-image-size: ('desktop': 680px, 'mobile': 360px, 'small-desktop': 400px);
+$product-image-size: (
+  big: 680px,
+  small: 360px,
+  medium: 400px
+);
 
 .product-container{
   width: 80%;
@@ -17,13 +21,13 @@ $product-image-size: ('desktop': 680px, 'mobile': 360px, 'small-desktop': 400px)
 }
 
 .product-image{
-  flex: 0 0 map.get($product-image-size, 'desktop');
+  flex: 0 0 map.get($product-image-size, big);
   height: auto;
   padding: 0 16px;
   > img {
     height: 100%;
     width: 100%;
-    max-height: map.get($product-image-size, 'desktop');
+    max-height: map.get($product-image-size, big);
     object-fit: contain;
     border-radius: 8px;
   }
@@ -60,7 +64,7 @@ $product-image-size: ('desktop': 680px, 'mobile': 360px, 'small-desktop': 400px)
 }
 
 .description-container{
-  max-width:  map.get($product-image-size, 'desktop');
+  max-width:  map.get($product-image-size, big);
   margin-top: 50px;
 
   > span {
@@ -77,9 +81,9 @@ $product-image-size: ('desktop': 680px, 'mobile': 360px, 'small-desktop': 400px)
 @include breakpoint(lg){
   .product-image{
     padding: 0;
-    flex: 0 0 map.get($product-image-size, 'small-desktop');
+    flex: 0 0 map.get($product-image-size, medium);
     > img {
-      max-height: map.get($product-image-size, 'small-desktop');;
+      max-height: map.get($product-image-size, medium);;
     }
   }
   .buy-container{
@@ -98,9 +102,9 @@ $product-image-size: ('desktop': 680px, 'mobile': 360px, 'small-desktop': 400px)
   }
   .product-image{
     padding: 0;
-    flex: 0 0 map.get($product-image-size, 'mobile');
+    flex: 0 0 map.get($product-image-size, small);
     > img {
-      max-height: map.get($product-image-size, 'mobile');;
+      max-height: map.get($product-image-size, small);;
     }
   }
 }

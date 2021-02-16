@@ -3,8 +3,8 @@
 @import './mixins/breakpoint.scss';
 
 $preview-img-size: (
-  'desktop': 180px,
-  'mobile': 130px
+  big: 180px,
+  small: 130px
 );
 
 .product-preview {
@@ -27,8 +27,8 @@ $preview-img-size: (
   max-width: 80%;
 
   > img {
-    height: map.get($preview-img-size, 'desktop');
-    width: map.get($preview-img-size, 'desktop');
+    height: map.get($preview-img-size, big);
+    width: map.get($preview-img-size, big);
     object-fit: cover;
     border-radius: 4px;
     margin: 0 16px;
@@ -80,7 +80,7 @@ $preview-img-size: (
   }
 
   .product-info > img {
-    height: map.get($preview-img-size, 'mobile');
-    width: map.get($preview-img-size, 'mobile');
+    height: map.get($preview-img-size, small);
+    width: map.get($preview-img-size, small);
   }
 }
