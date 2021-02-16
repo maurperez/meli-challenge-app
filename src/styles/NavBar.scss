@@ -1,5 +1,5 @@
 @use 'sass:color';
-@import './variables.scss';
+@import './variables/color.scss';
 @import './mixins/breakpoint.scss';
 
 $seachbar-heigth: 40px;

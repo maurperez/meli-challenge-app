@@ -1,5 +1,5 @@
 @use "sass:map";
-@import './variables.scss';
+@import './variables/color.scss';
 @import './mixins/breakpoint.scss';
 
 $preview-img-size: (
