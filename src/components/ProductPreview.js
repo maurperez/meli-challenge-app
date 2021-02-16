@@ -12,7 +12,7 @@ export const ProductPreview = ({ product }) => {
     <div className='product-preview flex-row'>
       <div className='flex-row product-info'>
         <a href={`/items/${product.id}`} className='thumbtail'>
-          <img src={product.picture} alt={product.title}/>
+          <img src={product.picture} alt={product.title} />
         </a>
         <div className='flex-column price-and-title'>
           <div className='price-container flex-row'>

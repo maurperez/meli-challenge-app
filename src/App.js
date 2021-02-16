@@ -10,7 +10,7 @@ function App() {
   return (
     <BrowserRouter>
       <Container>
-        <NavBar/>
+        <NavBar />
         <Switch>
           <Route path='/' exact>
             <CajaDeBusqueda />
@@ -19,7 +19,7 @@ function App() {
             <ResultadosDeBusqueda></ResultadosDeBusqueda>
           </Route>
           <Route path='/items/:id' exact>
-            <ProductDetalle/>
+            <ProductDetalle />
           </Route>
         </Switch>
       </Container>
