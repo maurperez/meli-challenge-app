@@ -1,0 +1,106 @@
+@use 'sass:map';
+@import './mixins.scss';
+
+$product-image-size: ('desktop': 680px, 'mobile': 360px, 'small-desktop': 400px);
+
+.product-container{
+  width: 80%;
+  margin: 32px auto 32px auto;
+  padding: 32px;
+  box-sizing: border-box;
+  background-color: white;
+
+  > .image-and-buy {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+.product-image{
+  flex: 0 0 map.get($product-image-size, 'desktop');
+  height: auto;
+  padding: 0 16px;
+  > img {
+    height: 100%;
+    width: 100%;
+    max-height: map.get($product-image-size, 'desktop');
+    object-fit: contain;
+    border-radius: 8px;
+  }
+}
+
+.buy-container {
+  flex: 1 1 0;
+  min-width: 300px;
+
+  > .condition-and-solds{
+    font-size: 14px;
+  }
+
+  > .title{
+    font-size: 24px;
+    margin: 16px 0 0 0;
+  }
+
+  > .price{
+    margin-top: 32px;
+    font-size: 46px;
+  }
+
+  > .buy-btn{
+    margin-top: 32px;
+    background-color: #3486fa;
+    font-size: large;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    height: 40px;
+    cursor: pointer;
+  }
+}
+
+.description-container{
+  max-width:  map.get($product-image-size, 'desktop');
+  margin-top: 50px;
+
+  > span {
+    font-size: 28px;
+  }
+  > .description {
+    white-space: pre-wrap;
+    margin-top: 32px;
+    font-size: 16px;
+    color: #666666;
+  }
+}
+
+@include breakpoint(small-desktop){
+  .product-image{
+    padding: 0;
+    flex: 0 0 map.get($product-image-size, 'small-desktop');
+    > img {
+      max-height: map.get($product-image-size, 'small-desktop');;
+    }
+  }
+  .buy-container{
+    margin-top: 20px;
+  }
+}
+
+@include breakpoint(mobile){
+  .product-container {
+    width: 100%;
+    padding: 24px;
+  }
+
+  .buy-container{
+    margin-top: 20px;
+  }
+  .product-image{
+    padding: 0;
+    flex: 0 0 map.get($product-image-size, 'mobile');
+    > img {
+      max-height: map.get($product-image-size, 'mobile');;
+    }
+  }
+}
