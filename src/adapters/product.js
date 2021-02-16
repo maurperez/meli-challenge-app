@@ -1,8 +1,8 @@
 const BASE_URL = `http://localhost:8080/api`
 
-const search = async query => {
+const search = async (query, limit) => {
   console.log(query)
-  const response = await fetch(`${BASE_URL}/items?q=${query}`)
+  const response = await fetch(`${BASE_URL}/items?q=${query}&limit=${limit || 50}`)
   if (!response.ok) {
     throw new Error('API Error')
   }

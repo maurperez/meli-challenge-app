@@ -10,11 +10,12 @@ export const ResultadosDeBusqueda = () => {
   const location = useLocation()
 
   const fetchObject = useMemo(() => {
+    const elementsPerPage = 4
     const query = new URLSearchParams(location.search).get('search')
 
     return {
       resource: productAdapter.search,
-      parameters: [query],
+      parameters: [query, elementsPerPage],
       cacheIndentifier: `q=${query}`,
       typeResource: 'SEARCH_PRODUCT'
     }
@@ -30,7 +31,7 @@ export const ResultadosDeBusqueda = () => {
         <Fragment>
           <div className='products-container'>
             <span className='categories'>{data.categories?.join(' > ')}</span>
-            {data.items.slice(0, 4).map(product => (
+            {data.items.map(product => (
               <ProductPreview product={product} key={product.id} />
             ))}
           </div>
