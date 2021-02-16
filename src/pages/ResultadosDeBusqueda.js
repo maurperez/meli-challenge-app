@@ -7,7 +7,6 @@ import { useFetchReducer } from '../hooks/useFetchReducer'
 import { productAdapter } from '../adapters/product'
 
 export const ResultadosDeBusqueda = () => {
-
   const location = useLocation()
 
   const fetchObject = useMemo(() => {
@@ -21,7 +20,7 @@ export const ResultadosDeBusqueda = () => {
     }
   }, [location])
 
-  const {data, error, loading} = useFetchReducer(fetchObject)
+  const { data, error, loading } = useFetchReducer(fetchObject)
 
   return (
     <>
@@ -30,9 +29,7 @@ export const ResultadosDeBusqueda = () => {
       {data && (
         <Fragment>
           <div className='products-container'>
-            <span className='categories'>
-              {data.categories?.join(' > ')}
-            </span>
+            <span className='categories'>{data.categories?.join(' > ')}</span>
             {data.items.slice(0, 4).map(product => (
               <ProductPreview product={product} key={product.id} />
             ))}
