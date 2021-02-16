@@ -1,7 +1,7 @@
-const BASE_URL = `http://localhost:8080/api`
+const BASE_URL = process.env.REACT_APP_API_URL
 
 const search = async (query, limit) => {
-  console.log(query)
+  console.log(BASE_URL)
   const response = await fetch(`${BASE_URL}/items?q=${query}&limit=${limit || 50}`)
   if (!response.ok) {
     throw new Error('API Error')
