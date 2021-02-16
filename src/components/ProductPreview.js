@@ -11,10 +11,12 @@ export const ProductPreview = ({ product }) => {
   return (
     <div className='product-preview flex-row'>
       <div className='flex-row product-info'>
-        <img src={product.picture} alt={product.title}></img>
+        <a href={`/items/${product.id}`} className='thumbtail'>
+          <img src={product.picture} alt={product.title}/>
+        </a>
         <div className='flex-column price-and-title'>
           <div className='price-container flex-row'>
-            <a className='price' href={`/item/${product.id}`}>
+            <a className='price' href={`/items/${product.id}`}>
               {formatPrice(product.price)}
             </a>
             {product.free_shipping && (
