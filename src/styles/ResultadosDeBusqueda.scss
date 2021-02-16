@@ -15,9 +15,11 @@
 }
 
 @include breakpoint(md) {
-  width: 100%;
+  .products-container{
+    width: 100%;
 
-  .categories {
-    margin: 16px 0 16px 10px;
+    .categories {
+      margin: 16px 0 16px 10px;
+    }
   }
 }

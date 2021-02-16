@@ -80,7 +80,6 @@ $product-image-size: (
 
 @include breakpoint(lg){
   .product-image{
-    padding: 0;
     flex: 0 0 map.get($product-image-size, medium);
     > img {
       max-height: map.get($product-image-size, medium);;
