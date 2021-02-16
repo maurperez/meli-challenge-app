@@ -1,18 +1,14 @@
-$mobile-bp: 480px;
-$small-desktop-bp: 950px;
+@use 'sass:map';
+$grid-breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
 
 @mixin breakpoint($point, $customPoint: 0) {
-  @if $point == mobile {
-    @media screen and (max-width: $mobile-bp) {
-      @content;
-    }
-  }@else if $point == small-desktop {
-    @media screen and (max-width: $small-desktop-bp) {
-      @content;
-    }
-  }@else if $point == custom {
-    @media screen and (max-width: $customPoint) {
-      @content
-    }
+  @media screen and (max-width: map.get($grid-breakpoints, $point)) {
+    @content;
   }
 }

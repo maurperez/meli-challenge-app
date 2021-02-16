@@ -56,7 +56,7 @@ $seachbar-heigth: 40px;
   }
 }
 
-@include breakpoint(mobile){
+@include breakpoint(sm){
   .nav-container {
     padding: 0;
     > img {

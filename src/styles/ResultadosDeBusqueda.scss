@@ -13,7 +13,7 @@
     margin: 16px 0;
   }
 
-  @include breakpoint(mobile) {
+  @include breakpoint(md) {
     width: 100%;
 
     > .categories {
