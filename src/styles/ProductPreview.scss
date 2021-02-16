@@ -12,27 +12,26 @@ $preview-img-size: (
   padding: 16px 0;
   justify-content: space-between;
   background-color: white;
+}
 
-  .location {
-    font-size: 12px;
-    margin: 20px 30px;
-    color: #999999;
-    white-space: nowrap;
-    text-align: right;
-  }
+.location {
+  font-size: 12px;
+  margin: 20px 30px;
+  color: #999999;
+  text-align: right;
 }
 
 .product-info {
   align-items: flex-start;
   max-width: 80%;
+}
 
-  > img {
-    height: map.get($preview-img-size, big);
-    width: map.get($preview-img-size, big);
-    object-fit: cover;
-    border-radius: 4px;
-    margin: 0 16px;
-  }
+.thumbtail > img {
+  height: map.get($preview-img-size, big);
+  width: map.get($preview-img-size, big);
+  object-fit: cover;
+  border-radius: 4px;
+  margin: 0 16px;
 }
 
 .price-and-title {
@@ -41,22 +40,22 @@ $preview-img-size: (
     font-size: 18px;
     margin: 0;
   }
+}
 
-  .price-container {
-    align-items: center;
-    margin-bottom: 32px;
+.price-container {
+  align-items: center;
+  margin-bottom: 32px;
 
-    > .price {
-      margin-right: 5px;
-      font-size: 24px;
-      text-decoration: none;
-      color: black;
-    }
+  .price {
+    margin-right: 5px;
+    font-size: 24px;
+    text-decoration: none;
+    color: black;
+  }
 
-    > .icon-ship {
-      height: 65%;
-      width: auto;
-    }
+  .icon-ship {
+    height: 65%;
+    width: auto;
   }
 }
 
@@ -70,16 +69,17 @@ $preview-img-size: (
     .title {
       font-size: 14px;
     }
+  }
 
-    .price-container {
-      margin-bottom: 20px;
-      > .price {
-        font-size: 20px;
-      }
+  .price-container {
+    margin-bottom: 20px;
+
+    .price {
+      font-size: 20px;
     }
   }
 
-  .product-info > img {
+  .thumbtail > img {
     height: map.get($preview-img-size, small);
     width: map.get($preview-img-size, small);
   }
