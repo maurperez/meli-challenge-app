@@ -13,7 +13,7 @@ $preview-img-size: (
   justify-content: space-between;
   background-color: white;
 
-  > .location {
+  .location {
     font-size: 12px;
     margin: 20px 30px;
     color: #999999;
@@ -36,13 +36,13 @@ $preview-img-size: (
 }
 
 .price-and-title {
-  > .title {
+  .title {
     font-weight: normal;
     font-size: 18px;
     margin: 0;
   }
 
-  > .price-container {
+  .price-container {
     align-items: center;
     margin-bottom: 32px;
 
@@ -61,17 +61,17 @@ $preview-img-size: (
 }
 
 @include breakpoint(sm) {
-  .product-preview > .location {
+  .location {
     margin: 10px 5px 0 0;
     white-space: normal;
   }
 
   .price-and-title {
-    > .title {
+    .title {
       font-size: 14px;
     }
 
-    > .price-container {
+    .price-container {
       margin-bottom: 20px;
       > .price {
         font-size: 20px;

@@ -7,17 +7,17 @@
   display: flex;
   flex-direction: column;
 
-  > .categories {
+  .categories {
     color: #999999;
     font-size: 14px;
     margin: 16px 0;
   }
+}
 
-  @include breakpoint(md) {
-    width: 100%;
+@include breakpoint(md) {
+  width: 100%;
 
-    > .categories {
-      margin: 16px 0 16px 10px;
-    }
+  .categories {
+    margin: 16px 0 16px 10px;
   }
 }

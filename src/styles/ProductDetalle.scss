@@ -13,11 +13,11 @@ $product-image-size: (
   padding: 32px;
   box-sizing: border-box;
   background-color: white;
+}
 
-  > .image-and-buy {
-    justify-content: center;
-    flex-wrap: wrap;
-  }
+.image-and-buy {
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .product-image{
@@ -37,21 +37,21 @@ $product-image-size: (
   flex: 1 1 0;
   min-width: 300px;
 
-  > .condition-and-solds{
+  .condition-and-solds{
     font-size: 14px;
   }
 
-  > .title{
+  .title{
     font-size: 24px;
     margin: 16px 0 0 0;
   }
 
-  > .price{
+  .price{
     margin-top: 32px;
     font-size: 46px;
   }
 
-  > .buy-btn{
+  .buy-btn{
     margin-top: 32px;
     background-color: #3486fa;
     font-size: large;
@@ -70,7 +70,7 @@ $product-image-size: (
   > span {
     font-size: 28px;
   }
-  > .description {
+  .description {
     white-space: pre-wrap;
     margin-top: 32px;
     font-size: 16px;
@@ -103,6 +103,7 @@ $product-image-size: (
   .product-image{
     padding: 0;
     flex: 0 0 map.get($product-image-size, small);
+
     > img {
       max-height: map.get($product-image-size, small);;
     }
