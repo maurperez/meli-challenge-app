@@ -1,5 +1,5 @@
 @use 'sass:map';
-@import './mixins.scss';
+@import './mixins/breakpoint.scss';
 
 $product-image-size: ('desktop': 680px, 'mobile': 360px, 'small-desktop': 400px);
 

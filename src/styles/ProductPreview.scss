@@ -1,6 +1,7 @@
 @use "sass:map";
 @import './variables.scss';
-@import './mixins.scss';
+@import './mixins/breakpoint.scss';
+
 $preview-img-size: (
   'desktop': 180px,
   'mobile': 130px
