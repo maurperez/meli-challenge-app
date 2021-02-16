@@ -5,25 +5,28 @@ import { Container } from './components/Container'
 import './styles/index.scss'
 import { NavBar } from './components/Navbar'
 import { ProductDetalle } from './pages/ProductDetalle'
+import { CacheProvider } from './contexts/cacheContext'
 
 function App() {
   return (
-    <BrowserRouter>
-      <Container>
-        <NavBar />
-        <Switch>
-          <Route path='/' exact>
-            <CajaDeBusqueda />
-          </Route>
-          <Route path='/items' exact>
-            <ResultadosDeBusqueda></ResultadosDeBusqueda>
-          </Route>
-          <Route path='/items/:id' exact>
-            <ProductDetalle />
-          </Route>
-        </Switch>
-      </Container>
-    </BrowserRouter>
+    <CacheProvider>
+      <BrowserRouter>
+        <Container>
+          <NavBar />
+          <Switch>
+            <Route path='/' exact>
+              <CajaDeBusqueda />
+            </Route>
+            <Route path='/items' exact>
+              <ResultadosDeBusqueda></ResultadosDeBusqueda>
+            </Route>
+            <Route path='/items/:id' exact>
+              <ProductDetalle />
+            </Route>
+          </Switch>
+        </Container>
+      </BrowserRouter>
+    </CacheProvider>
   )
 }
 
