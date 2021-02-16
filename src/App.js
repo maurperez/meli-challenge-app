@@ -4,6 +4,7 @@ import { ResultadosDeBusqueda } from './pages/ResultadosDeBusqueda'
 import { Container } from './components/Container'
 import './styles/index.scss'
 import { NavBar } from './components/Navbar'
+import { ProductDetalle } from './pages/ProductDetalle'
 
 function App() {
   return (
@@ -16,6 +17,9 @@ function App() {
           </Route>
           <Route path='/items' exact>
             <ResultadosDeBusqueda></ResultadosDeBusqueda>
+          </Route>
+          <Route path='/items/:id' exact>
+            <ProductDetalle/>
           </Route>
         </Switch>
       </Container>
