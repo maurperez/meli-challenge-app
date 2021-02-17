@@ -26,12 +26,18 @@ $preview-img-size: (
   max-width: 80%;
 }
 
-.thumbtail > img {
-  height: map.get($preview-img-size, big);
-  width: map.get($preview-img-size, big);
-  object-fit: cover;
-  border-radius: 4px;
+.thumbtail {
+  flex: 0 0 map.get($preview-img-size, big);
+  height: auto;
   margin: 0 16px;
+
+  > img {
+    height: 100%;
+    width: 100%;
+    max-height: map.get($preview-img-size, big);
+    object-fit: contain;
+    border-radius: 4px;
+  }
 }
 
 .price-and-title {
@@ -79,8 +85,10 @@ $preview-img-size: (
     }
   }
 
-  .thumbtail > img {
-    height: map.get($preview-img-size, small);
-    width: map.get($preview-img-size, small);
+  .thumbtail {
+    flex: 0 0 map.get($preview-img-size, small);
+    > img {
+      max-height: map.get($preview-img-size, small);
+    }
   }
 }
