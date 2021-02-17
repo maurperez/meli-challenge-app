@@ -5,6 +5,11 @@ import { Loading } from '../components/Loading'
 import { useFetchReducer } from '../hooks/useFetchReducer'
 import '../styles/ProductDetalle.scss'
 
+const productConditionsInSpanish = {
+  new: 'Nuevo',
+  used: 'Usado'
+}
+
 export const ProductDetalle = () => {
   const { id } = useParams()
 
@@ -38,7 +43,7 @@ export const ProductDetalle = () => {
             </div>
             <div className='buy-container flex-column'>
               <span className='condition-and-solds'>
-                {data.condition} - {data.sold_quantity} vendidos
+                {productConditionsInSpanish[data.condition]} - {data.sold_quantity} vendidos
               </span>
               <h1 className='title'>{data.title}</h1>
               <span className='price'>{formatPrice(data.price)}</span>
