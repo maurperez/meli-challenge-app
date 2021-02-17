@@ -16,6 +16,13 @@ Aplicación web desarrollada en base al challenge de Front-End propuesto por Mer
 
 
 
+## Deployment
+
+1. Buildear una versión mirificada de la aplicación ejecutando el comando `npm run build`
+2. Correr la versión *build* en un servidor ejecutando el comando `npm run start:build`
+
+
+
 ## Estructuración del proyecto
 
 * **/src**
