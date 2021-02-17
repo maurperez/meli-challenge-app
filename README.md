@@ -9,11 +9,10 @@ Aplicación web desarrollada en base al challenge de Front-End propuesto por Mer
 ## Instalación
 
 1. Clonar el proyecto
-
-3. Instalar las dependencias ejecutando `npm install`  dentro del directorio donde se haya clonado
-4. Crear un archivo `.env` con la configuración de la aplicación, guiándose con el archivo `.env.example` , o por otro  lado, también puede renombrar este mismo a `.env` y debería de funcionar con las configuraciones por defecto
-5. Clonar, instalar, e inicializar la API correspondiente a este proyecto [aqui](https://github.com/maurperez/MELI-Challenge-API) . (En el mismo se encuentran las instrucciones de instalación)
-6. Inicializar el proyecto ejecutando `npm run start`  dentro del directorio donde se haya clonado
+2. Instalar las dependencias ejecutando `npm install`  dentro del directorio donde se haya clonado
+3. Crear un archivo `.env` con la configuración de la aplicación, guiándose con el archivo `.env.example` , o por otro  lado, también puede renombrar este mismo a `.env` y debería de funcionar con las configuraciones por defecto
+4. Clonar, instalar, e inicializar la API correspondiente a este proyecto [aqui](https://github.com/maurperez/MELI-Challenge-API) . (En el mismo se encuentran las instrucciones de instalación)
+5. Inicializar el proyecto ejecutando `npm run start`  dentro del directorio donde se haya clonado
 
 
 
