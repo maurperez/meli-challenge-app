@@ -23,7 +23,7 @@ $product-image-size: (
 .product-image {
   flex: 0 0 map.get($product-image-size, big);
   height: auto;
-  padding: 0 16px;
+  padding-right: 16px;
   > img {
     height: 100%;
     width: 100%;
