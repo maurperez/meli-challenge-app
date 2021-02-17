@@ -27,7 +27,7 @@ export const ProductPreview = ({ product }) => {
               ></img>
             )}
           </div>
-          <h3 className='title'>{product.title}</h3>
+          <h2 className='title'>{product.title}</h2>
         </div>
       </div>
       <span className='location'>{product.location}</span>
